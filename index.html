@@ -4250,32 +4250,7 @@
   
   
   	
-	<script>
-	$(document).ready(function() {
-		function getParameterByName(name) {
-			var url = window.location.href;
-			name = name.replace(/[\[\]]/g, "\\$&");
-			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-				results = regex.exec(url);
-			if (!results) return null;
-			if (!results[2]) return '';
-			return decodeURIComponent(results[2].replace(/\+/g, " "));
-		}
-
-		var nama_tamu = getParameterByName('tamu');
-		if (nama_tamu) {
-			nama_tamu = decodeURIComponent(nama_tamu)
-				.replace(/-/g, " ") // Mengganti '-' dengan spasi
-				.replace(/\|/g, " / ") // Mengganti '|' dengan ' / '
-				.replace(/ dan /gi, " & "); // Mengganti 'dan' dengan '&' (case-insensitive)
-		} else {
-			nama_tamu = "Tamu Undangan";
-		}
-
-		$("#nama_tamu_undangan").append(nama_tamu);
-	});
-
-	</script>
+	<script src="base-mod.js"></script>
 	
 	
 	
